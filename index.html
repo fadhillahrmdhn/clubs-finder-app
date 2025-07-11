@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sport Club App</title>
 
     <!-- Own Styles -->
@@ -13,9 +12,7 @@
   </head>
   <body>
     <header>
-      <div class="app-bar">
-        <h1 class="brand-name">Sport Club Finder</h1>
-      </div>
+      <app-bar></app-bar>
     </header>
 
     <main>
@@ -41,18 +38,14 @@
             <div class="placeholder query-waiting">Waiting for search keyword</div>
             <div class="placeholder search-loading">Loading</div>
 
-            <div id="clubList" class="club-list">
-              <div class="list"></div>
-            </div>
+            <club-list></club-list>
           </div>
         </section>
       </div>
     </main>
 
     <footer>
-      <div class="container">
-        <div class="main-footer">Club Finder &copy; 2023</div>
-      </div>
+      <footer-bar></footer-bar>
     </footer>
 
     <script type="module" src="/src/app.js"></script>
