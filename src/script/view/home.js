@@ -2,7 +2,7 @@ import Utils from '../utils.js';
 import Clubs from '../data/local/clubs.js';
 
 const home = () => {
-  const searchFormElement = document.querySelector('#searchForm');
+  const searchFormElement = document.querySelector('search-bar');
 
   const clubListContainerElement = document.querySelector('#clubListContainer');
   const clubQueryWaitingElement = clubListContainerElement.querySelector('.query-waiting');
@@ -20,7 +20,7 @@ const home = () => {
 
   const onSearchHandler = (event) => {
     event.preventDefault();
-    const query = event.target.elements.nama.value;
+    const { query } = event.detail;
     showSportClub(query);
   };
 
@@ -57,7 +57,12 @@ const home = () => {
     Utils.showElement(clubQueryWaitingElement);
   };
 
-  searchFormElement.addEventListener('submit', onSearchHandler);
+  //home.js memasang listener langsung pada searchFormElement (<search-bar>). Karena listener-nya berada tepat di sumber event (target), secara teknis ia masih akan tertangkap bahkan tanpa bubbles: true.Contoh alternatif di home.js, Listener sekarang ada di parent, bukan di search-bar langsung 
+  // const clubSection = document.querySelector('#club');
+  // clubSection.addEventListener('search', onSearchHandler);
+  //kode berikut bisa berjalan karena Dengan bubbles: true: Event dari <search-bar> akan merambat naik ke clubSection dan listener akan bekerja dengan sempurna.
+  // Jika Tanpa bubbles: true: Event dari <search-bar> akan berhenti sebelum mencapai clubSection. Listener tidak akan pernah terpicu. 
+  searchFormElement.addEventListener('search', onSearchHandler);
 
   showQueryWaiting();
 };
