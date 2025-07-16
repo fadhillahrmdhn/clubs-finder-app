@@ -17,7 +17,7 @@ class SearchBar extends HTMLElement {
   }
 
   connectedCallback() {
-    this._shadowRoot.querySelector('form').addEventListener('submit', (Event) => this._onFormSubmit(Event, this));
+    this._shadowRoot.querySelector('form').addEventListener('submit', (event) => this._onFormSubmit(event, this));
     this.addEventListener(this.__submitEvent, this._onSearchBarSubmit);
   }
 

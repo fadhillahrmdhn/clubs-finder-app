@@ -28,3 +28,5 @@ class SearchStatusIndicator extends HTMLElement {
         `
     }
 }
+
+customElements.define('search-status-indicator', SearchStatusIndicator);

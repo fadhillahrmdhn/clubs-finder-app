@@ -12,6 +12,7 @@ class Utils {
     element.hidden = true;
   }
 
+    //Todo: make this isValidInteger function work
   static isValidInteger(newValue){
     return Number.isNaN(newValue) || Number.isFinite(newValue);
   }
