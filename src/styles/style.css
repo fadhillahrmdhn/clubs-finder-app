@@ -192,14 +192,6 @@ main {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5; /* number of lines to show */
 }
-
-.club-list-container .placeholder {
-  margin-block: 1rem;
-
-  font-size: 1.5rem;
-  font-weight: lighter;
-  color: rgba(0, 0, 0, 0.5);
-}
 /* End of Main */
 
 /* Start of Footer */

@@ -14,8 +14,6 @@ class ClubList extends HTMLElement {
     super();
     this._shadowRoot = this.attachShadow({ mode: 'open' });
     this._style = document.createElement('style');
-
-    this.render();
   }
 
   _updateStyle() {

@@ -21,6 +21,7 @@ class SearchBar extends HTMLElement {
     this.addEventListener(this.__submitEvent, this._onSearchBarSubmit);
   }
 
+  //Todo: make this disconnectedCallback function work
   disconnectedCallback() {
     this._shadowRoot.querySelector('form').removeEventListener('submit', (event) => this._onFormSubmit(event, this));
 
