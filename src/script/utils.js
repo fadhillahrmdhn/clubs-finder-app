@@ -12,9 +12,9 @@ class Utils {
     element.hidden = true;
   }
 
-    //Todo: make this isValidInteger function work
-  static isValidInteger(newValue){
-    return Number.isNaN(newValue) || Number.isFinite(newValue);
+  static isValidInteger(value) {
+    // Checks if the value is a finite number, correctly returning false for NaN, Infinity.
+    return Number.isFinite(value);
   }
 }
 

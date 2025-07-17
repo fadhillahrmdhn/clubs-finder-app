@@ -39,7 +39,8 @@ class ClubList extends HTMLElement {
     const newValue = Number(value);
     if (!Utils.isValidInteger(newValue)) return;
 
-    this._column = value;
+    // Store the validated number.
+    this._column = newValue;
   }
 
   get column() {
@@ -49,7 +50,8 @@ class ClubList extends HTMLElement {
   set gutter(value) {
     const newValue = Number(value);
     if (!Utils.isValidInteger(newValue)) return;
-    this._gutter = value;
+    // Store the validated number.
+    this._gutter = newValue;
   }
 
   get gutter() {
