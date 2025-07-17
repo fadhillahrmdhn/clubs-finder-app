@@ -28,12 +28,6 @@ body {
 label {
   display: block;
 }
-
-section > .title-section {
-  margin-block-end: 2rem;
-
-  font-size: 1.2em;
-}
 /* GLOBAL */
 
 /* Start of Header */
